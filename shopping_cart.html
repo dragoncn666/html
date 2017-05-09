@@ -1,0 +1,363 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>购物车</title>
+		<link rel="stylesheet" type="text/css" href="../css/aui.css" />
+	</head>
+
+	<body>
+		<!--头部搜索-->
+		<header class="aui-bar aui-bar-nav aui-bar-light">
+			<a class="aui-pull-left aui-btn" href="../index.html">
+				<span class="aui-iconfont aui-icon-left"></span>
+			</a>
+			<div class="aui-title">扫码销售</div>
+			<a class="customer" href="customer_information.html">
+				张
+			</a>
+			<!--显示客户姓名首字-->
+			<a class="customer" href="customer_information.html" style="display: none;">
+				<span class="iconfont icon-sousuokehumoren"></span>
+			</a>
+			<!--未选择客户时图标显示，暂隐藏-->
+		</header>
+		<div style="height: 11.2rem;"></div>
+		<!--头部搜索end-->
+		<!--便利扫-->
+		<div class="sweep_yard_con">
+			<div class="sweep_yard">
+				<li></li>
+			</div>
+			<div class="enter_barcode" id="scan_barcode">
+				<div class="icon-keyboard" id="keyboard">
+					<i class="iconfont icon-jianpan"></i>
+				</div>
+				<div class="prompt_text">请对准条形码</div>
+			</div>
+			<div class="enter_barcode" id="enter_barcode" style="display: none;">
+				<div class="icon-keyboard" id="scan_board">
+					<i class="iconfont icon-saoma"></i>
+				</div>
+				<div class="input_barcode">
+					<input type="text" class="aui-input" placeholder="请输入条形码" />
+				</div>
+				<div class="aui-btn aui-btn-info">
+					<span class="aui-iconfont aui-icon-correct"></span>
+				</div>
+			</div>
+		</div>
+		<!--便利扫end-->
+		<!--商品列表-->
+		<div class="aui-content aui-margin-b-15 shopping_cart">
+			<ul class="aui-list aui-media-list">
+				<li class="aui-list-item">
+					<div class="aui-media-list-item-inner">
+						<div class="aui-media-list-item-inner line-normal-wrapper">
+							<div class="aui-list-item-media">
+								<a href="product_details.html"><img src="../image/thumb.jpg"></a>
+							</div>
+							<div class="aui-list-item-inner">
+								<div class="aui-list-item-title">
+									<a href="product_details.html">小型断路开关家用C型小型空气开关</a>
+								</div>
+								<div class="aui-list-item-text">
+									<span>规格：20A</span>
+									<span>库存：88件</span>
+								</div>
+								<div class="aui-list-item-text edit_number_con">
+									<span class="prices_text"><a href="product_details.html">¥ 988.00</a></span>
+									<div class="edit_number">
+										<i class="aui-iconfont aui-icon-minus"></i>
+										<input type="number" class="aui-input aui-text-center" value="3">
+										<i class="aui-iconfont aui-icon-plus"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="operations_list3">
+							<div class="aui-col-xs-4">
+								<i class="aui-iconfont aui-icon-trash"></i>
+								<p>删除</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="gifts-list">
+					<font><strong>赠品</strong>赠品名称赠品名称赠品名称</font>
+					<input class="aui-checkbox" type="checkbox" name="demo1" checked="">
+				</li>
+				<li class="aui-list-item">
+					<div class="aui-media-list-item-inner">
+						<div class="aui-media-list-item-inner line-normal-wrapper">
+							<div class="aui-list-item-media">
+								<a href="product_details.html"><img src="../image/thumb.jpg"></a>
+							</div>
+							<div class="aui-list-item-inner">
+								<div class="aui-list-item-title">
+									<a href="product_details.html">小型断路开关家用C型小型空气开关</a>
+								</div>
+								<div class="aui-list-item-text">
+									<span>规格：20A</span>
+									<span>库存：88件</span>
+								</div>
+								<div class="aui-list-item-text edit_number_con">
+									<span class="prices_text"><a href="product_details.html">¥ 988.00</a></span>
+									<div class="edit_number">
+										<i class="aui-iconfont aui-icon-minus"></i>
+										<input type="number" class="aui-input aui-text-center" value="3">
+										<i class="aui-iconfont aui-icon-plus"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="operations_list3">
+							<div class="aui-col-xs-4">
+								<i class="aui-iconfont aui-icon-trash"></i>
+								<p>删除</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="gifts-list">
+					<font><strong>赠品</strong>赠品名称赠品名称赠品名称</font>
+					<input class="aui-checkbox" type="checkbox" name="demo1" checked="">
+				</li>
+				<li class="aui-list-item">
+					<div class="aui-media-list-item-inner">
+						<div class="aui-media-list-item-inner line-normal-wrapper">
+							<div class="aui-list-item-media">
+								<a href="product_details.html"><img src="../image/thumb.jpg"></a>
+							</div>
+							<div class="aui-list-item-inner">
+								<div class="aui-list-item-title">
+									<a href="product_details.html">小型断路开关家用C型小型空气开关</a>
+								</div>
+								<div class="aui-list-item-text">
+									<span>规格：20A</span>
+									<span>库存：88件</span>
+								</div>
+								<div class="aui-list-item-text edit_number_con">
+									<span class="prices_text"><a href="product_details.html">¥ 988.00</a></span>
+									<div class="edit_number">
+										<i class="aui-iconfont aui-icon-minus"></i>
+										<input type="number" class="aui-input aui-text-center" value="3">
+										<i class="aui-iconfont aui-icon-plus"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="operations_list3">
+							<div class="aui-col-xs-4">
+								<i class="aui-iconfont aui-icon-trash"></i>
+								<p>删除</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-item">
+					<div class="aui-media-list-item-inner">
+						<div class="aui-media-list-item-inner line-normal-wrapper">
+							<div class="aui-list-item-media">
+								<a href="product_details.html"><img src="../image/thumb.jpg"></a>
+							</div>
+							<div class="aui-list-item-inner">
+								<div class="aui-list-item-title">
+									<a href="product_details.html">小型断路开关家用C型小型空气开关</a>
+								</div>
+								<div class="aui-list-item-text">
+									<span>规格：20A</span>
+									<span>库存：88件</span>
+								</div>
+								<div class="aui-list-item-text edit_number_con">
+									<span class="prices_text"><a href="product_details.html">¥ 988.00</a></span>
+									<div class="edit_number">
+										<i class="aui-iconfont aui-icon-minus"></i>
+										<input type="number" class="aui-input aui-text-center" value="3">
+										<i class="aui-iconfont aui-icon-plus"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="operations_list3">
+							<div class="aui-col-xs-4">
+								<i class="aui-iconfont aui-icon-trash"></i>
+								<p>删除</p>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--商品列表 end-->
+		<div style="height: 2.5rem;"></div>
+		<!--底部操作-->
+		<footer class="aui-bar aui-bar-tab aui-border-t">
+			<div class="aui-bar-tab-item" tapmode style="width:2.75rem; margin-left: 0.5rem;" onclick="javascript:window.location.href='index.html'" value="back">
+				<div class="aui-badge">99</div>
+				<i class="iconfont icon-gouwuche01"></i>
+			</div>
+			<div class="aui-bar-tab-item aui-text-left upward_con" tapmode style="width: auto;" onclick="javascript:window.location.href='index.html'" value="back">
+				<div class="upward_icon"></div><span class="prices_text">&nbsp;¥1800.00</span></div>
+			<div class="aui-bar-tab-item aui-bg-gray" tapmode style="width: 4rem;" onclick="openDialog('input')">存货单</div>
+			<div class="aui-bar-tab-item blue-bar aui-text-white" tapmode style="width: 4rem;" onclick="javascript:window.location.href='confirm_order.html'">去结算</div>
+		</footer>
+		<!--底部操作end-->
+
+	</body>
+	<script type="text/javascript" src="../script/api.js"></script>
+	<script type="text/javascript" src="../script/aui-dialog.js"></script>
+	<script type="text/javascript" src="../script/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript">
+		//弹出备注信息
+		apiready = function() {
+			api.parseTapmode();
+		}
+		var dialog = new auiDialog();
+
+		function openDialog(type) {
+			switch(type) {
+
+				case "input":
+					dialog.prompt({
+						title: "请输入货单备注（可不填写）",
+						type: 'number',
+						buttons: ['取消', '确定']
+					})
+					break;
+				default:
+					break;
+
+			}
+		}
+		//输入条形码切换
+		$("#keyboard").click(function() {
+			$("#enter_barcode").show();
+			$("#scan_barcode").hide();
+		});
+		$("#scan_board").click(function() {
+			$("#enter_barcode").hide();
+			$("#scan_barcode").show();
+		});
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function(e) {
+			// 设定每一行的宽度=屏幕宽度+按钮宽度
+			$(".aui-media-list-item-inner").width($(".aui-list-item").width() + $(".operations_list3").width() + 40);
+			// 设定常规信息区域宽度=屏幕宽度
+
+			$(".line-normal-wrapper").width($(".aui-list-item").width());
+			// 设定文字部分宽度（为了实现文字过长时在末尾显示...）
+			$(".line-normal-msg").width($(".line-normal-wrapper").width() - 280);
+
+			// 获取所有行，对每一行设置监听
+			var lines = $(".line-normal-wrapper");
+			var len = lines.length;
+			var lastX, lastXForMobile;
+
+			// 用于记录被按下的对象
+			var pressedObj; // 当前左滑的对象
+			var lastLeftObj; // 上一个左滑的对象
+
+			// 用于记录按下的点
+			var start;
+
+			// 网页在移动端运行时的监听
+			for(var i = 0; i < len; ++i) {
+				lines[i].addEventListener('touchstart', function(e) {
+					lastXForMobile = e.changedTouches[0].pageX;
+					pressedObj = this; // 记录被按下的对象 
+
+					// 记录开始按下时的点
+					var touches = event.touches[0];
+					start = {
+						x: touches.pageX, // 横坐标
+						y: touches.pageY // 纵坐标
+					};
+				});
+
+				lines[i].addEventListener('touchmove', function(e) {
+					// 计算划动过程中x和y的变化量
+					var touches = event.touches[0];
+					delta = {
+						x: touches.pageX - start.x,
+						y: touches.pageY - start.y
+					};
+
+					// 横向位移大于纵向位移，阻止纵向滚动
+					if(Math.abs(delta.x) > Math.abs(delta.y)) {
+						event.preventDefault();
+					}
+				});
+
+				lines[i].addEventListener('touchend', function(e) {
+					if(lastLeftObj && pressedObj != lastLeftObj) { // 点击除当前左滑对象之外的任意其他位置
+						$(lastLeftObj).animate({
+							marginLeft: "0"
+						}, 500); // 右滑
+						lastLeftObj = null; // 清空上一个左滑的对象
+					}
+					var diffX = e.changedTouches[0].pageX - lastXForMobile;
+					if(diffX < -180) {
+						$(pressedObj).animate({
+							marginLeft: "-70px"
+						}, 500); // 左滑
+						lastLeftObj && lastLeftObj != pressedObj &&
+							$(lastLeftObj).animate({
+								marginLeft: "0"
+							}, 500); // 已经左滑状态的按钮右滑
+						lastLeftObj = pressedObj; // 记录上一个左滑的对象
+					} else if(diffX > 180) {
+						if(pressedObj == lastLeftObj) {
+							$(pressedObj).animate({
+								marginLeft: "0"
+							}, 500); // 右滑
+							lastLeftObj = null; // 清空上一个左滑的对象
+						}
+					}
+
+				});
+			}
+
+			// 网页在PC浏览器中运行时的监听
+			for(var i = 0; i < len; ++i) {
+				$(lines[i]).bind('mousedown', function(e) {
+					lastX = e.clientX;
+					pressedObj = this; // 记录被按下的对象
+				});
+
+				$(lines[i]).bind('mouseup', function(e) {
+					if(lastLeftObj && pressedObj != lastLeftObj) { // 点击除当前左滑对象之外的任意其他位置
+						$(lastLeftObj).animate({
+							marginLeft: "0"
+						}, 500); // 右滑
+						lastLeftObj = null; // 清空上一个左滑的对象
+					}
+					var diffX = e.clientX - lastX;
+					if(diffX < -180) {
+						$(pressedObj).animate({
+							marginLeft: "-70px"
+						}, 500); // 左滑
+						lastLeftObj && lastLeftObj != pressedObj &&
+							$(lastLeftObj).animate({
+								marginLeft: "0"
+							}, 500); // 已经左滑状态的按钮右滑
+						lastLeftObj = pressedObj; // 记录上一个左滑的对象
+					} else if(diffX > 180) {
+						if(pressedObj == lastLeftObj) {
+							$(pressedObj).animate({
+								marginLeft: "0"
+							}, 500); // 右滑
+							lastLeftObj = null; // 清空上一个左滑的对象
+						}
+					}
+				});
+			}
+		});
+	</script>
+
+</html>

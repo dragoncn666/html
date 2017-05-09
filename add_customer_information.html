@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>添加客户信息</title>
+		<link rel="stylesheet" type="text/css" href="../css/aui.css" />
+		<style type="text/css">
+			p {
+				margin-bottom: 0.5rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--头部搜索-->
+		<header class="aui-bar aui-bar-nav aui-bar-light">
+			<a class="aui-pull-left aui-btn" href="manage_customer_information.html">
+				<span class="aui-iconfont aui-icon-left"></span>
+			</a>
+			<div class="aui-title">添加客户信息</div>
+		</header>
+		<div style="height: 2.2rem;"></div>
+		<!--头部搜索end-->
+		<!--填写客户信息-->
+		<div class="aui-content">
+			<ul class="aui-list aui-form-list">
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-label">姓名 </div>
+						<div class="aui-list-item-input">
+							<input type="text">
+						</div>
+						<div class="aui-list-item-input gender_selection">
+							<label><input class="aui-radio" type="radio" name="demo1"> 男</label> &nbsp;&nbsp;
+							<label><input class="aui-radio" type="radio" name="demo1"> 女</label>
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-label">联系电话</div>
+						<div class="aui-list-item-input">
+							<input type="number">
+						</div>
+						<div class="aui-pull-right gender_selection"><i class="aui-iconfont aui-icon-plus add_phone"></i></div>
+					</div>
+				</li>
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-label">所在地区</div>
+						<div class="aui-list-item-input aui-list-item-arrow">
+							<input type="text" placeholder="请选择">
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-label">所在街道</div>
+						<div class="aui-list-item-input aui-list-item-arrow">
+							<input type="text" placeholder="请选择">
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-label">详细地址</div>
+						<div class="aui-list-item-input">
+							<textarea placeholder="请填写详细地址，不少于5个字"></textarea>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--填写客户信息end-->
+		<div class="aui-content-padded">
+			<p>
+				<div class="aui-btn aui-btn-info aui-btn-block">保存</div>
+			</p>
+			<p>
+				<div class="aui-btn aui-btn-block" onclick="javascript:window.location.href='manage_customer_information.html'">取消</div>
+			</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="../script/api.js"></script>
+
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html>
+	
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>确认订单</title>
+		<link rel="stylesheet" type="text/css" href="../css/aui.css" />
+	</head>
+
+	<body>
+		<!--头部搜索-->
+		<header class="aui-bar aui-bar-nav aui-bar-light">
+			<a class="aui-pull-left aui-btn" href="../index.html">
+				<span class="aui-iconfont aui-icon-left"></span>
+			</a>
+			<div class="aui-title">确认订单</div>
+		</header>
+		<div style="height: 2.2rem;"></div>
+		<!--头部搜索end-->
+		<!--选择客户信息-->
+		<div class="aui-content aui-margin-b-15">
+			<ul class="aui-list aui-media-list address_bj">
+				<li class="aui-list-item">
+					<div class="aui-media-list-item-inner">
+						<div class="aui-list-item-inner aui-list-item-arrow">
+							<div class="aui-list-item-title">客户信息</div>
+							<div class="aui-list-item-text">
+						<!-- 	<label>姓名：</label> -->
+								<input class="aui-list-item-title" type="text" placeholder="请输入姓名" />
+							<!-- <label>电话：</label> -->
+								<input class="aui-list-item-right aui-font-size-14" type="number" placeholder="请输入电话" />
+							</div>
+							<p><i class="aui-iconfont aui-icon-location"></i><input class="aui-iconfont aui-icon-location" id="aui-icon-location" placeholder="请输入地址" /></p>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+		<!--选择客户信息end-->
+		<!--商品列表-->
+		<section>
+			<ul class="aui-list aui-collapse aui-border aui-margin-b-15 shopping_list">
+				<div class="aui-collapse-item">
+					<li class="aui-list-item aui-collapse-header aui-active" tapmode>
+						<div class="aui-list-item-inner">
+							<div class="aui-list-item-title">
+								<span>
+									<span>共</span>
+									<span class="selectTotle">16</span>
+									<span>件商品，</span>
+								</span>
+								<span>
+									<span>总价</span>
+									<span>¥</span>
+									<span class="priceTotle">200000.00</span>
+								</span>	
+							 </div>
+							<div class="aui-list-item-right">
+								<i class="aui-iconfont aui-icon-down aui-collapse-arrow"></i>
+							</div>
+						</div>
+					</li>
+					<div class="aui-collapse-content aui-border-b aui-show">
+						<div class="aui-content list_gray">
+							<ul class="aui-list aui-media-list" id="aui-list">
+							
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</ul>
+		</section>
+		<!--商品列表 end-->
+		<!--填写备注信息-->
+		<div class="aui-content aui-margin-b-15">
+			<ul class="aui-list aui-list-in">
+				<li class="aui-list-item aui-list-item-arrow">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title">优惠活动</div>
+						<div class="aui-list-item-right">满减促销</div>
+					</div>
+				</li>
+				<li class="aui-list-item aui-list-item-arrow">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title">整单折扣</div>
+						<div class="aui-list-item-right">全额</div>
+					</div>
+				</li>
+				<li class="aui-list-item aui-list-item-arrow">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title">销售人员</div>
+						<div class="aui-list-item-right">默认登录用户</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="aui-content aui-margin-b-15">
+			<ul class="aui-list aui-form-list">
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-label">备注信息</div>
+						<div class="aui-list-item-input">
+							<textarea placeholder="输入备注信息"></textarea>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--填写备注信息end-->
+		<div style="height: 3rem;"></div>
+		<!--底部操作-->
+		<footer class="aui-bar aui-bar-tab aui-margin-t-15 bar-submit">
+			<div class="aui-bar-tab-item">
+				<div>合计：<span class="aui-text-danger">¥ <strong>1800.00</strong></span></div>
+			</div>
+			<!-- <div class="aui-bar-tab-item aui-bg-gray" tapmode style="width: 4rem;" onclick="javascript:window.location.href='index.html'">继续添加</div> -->
+			<div class="aui-bar-tab-item blue-bar aui-text-white" tapmode style="width: 4rem;" onclick="javascript:window.location.href='payment_confirmation.html'">确认订单</div>
+		</footer>
+		<!--底部操作end-->
+	</body>
+	<script type="text/javascript" src="../script/api.js"></script>
+	<script type="text/javascript" src="../script/aui-tab.js"></script>
+	<script type="text/javascript" src="../script/aui-collapse.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+			api.parseTapmode();
+		}
+		var tab = new auiTab({
+			element: document.getElementById("tab"),
+		}, function(ret) {
+			console.log(ret)
+		});
+		//订单折叠功能
+		apiready = function() {
+			api.parseTapmode();
+		}
+		var collapse = new auiCollapse({
+			autoHide: true //是否自动隐藏已经展开的容器
+		});
+	</script>
+	<script type="text/javascript">
+		var datas=[
+			{
+				productImg:"1.png",//商品图片路径
+				productName:"商品1小型断路开关家用C型小型空气开关",//商品名称
+				specNum:"1",//规格数量
+				specUnit:"A",//规格单位
+				productPrice:"50.00",//商品单价
+				productNum:"1",//商品数量
+				productUnit:"件",//商品单位
+				giftName:"赠品商品1小型断路开关家用C型小型空气开关",
+				
+				
+			},
+			{
+				productImg:"2.png",
+				productName:"商品2小型断路开关家用C型小型空气开关",
+				specNum:"2",
+				specUnit:"A2",
+				productPrice:"10.00",
+				productNum:"2",
+				productUnit:"个",
+				giftName:"赠品商品2小型断路开关家用C型小型空气开关",
+			},
+			{
+				productImg:"3.png",
+				productName:"商品3小型断路开关家用C型小型空气开关",
+				specNum:"3",
+				specUnit:"A3",
+				productPrice:"11.00",
+				productNum:"3",
+				productUnit:"件",
+				giftName:"赠品商品3小型断路开关家用C型小型空气开关",
+			},
+			{
+				productImg:"4.png",
+				productName:"商品4小型断路开关家用C型小型空气开关",
+				specNum:"4",
+				specUnit:"A4",
+				productPrice:"12.00",
+				productNum:"4",
+				productUnit:"个",
+				giftName:"赠品商品4小型断路开关家用C型小型空气开关",
+			},
+
+			{
+				productImg:"5.png",
+				productName:"商品5小型断路开关家用C型小型空气开关",
+				specNum:"5",
+				specUnit:"A5",
+				productPrice:"14.00",
+				productNum:"5",
+				productUnit:"件",
+				giftName:"赠品商品5小型断路开关家用C型小型空气开关",
+			},
+		]
+		var dom='';
+		$.each(datas,function(k1,v1){
+			dom+='<li class="aui-list-item">'
+					+'<div class="aui-media-list-item-inner">'
+						+'<div class="aui-list-item-media">'
+							+'<img src="../image/thumb.jpg">'
+						+'</div>'
+						+'<div class="aui-list-item-inner">'
+							+'<div class="aui-list-item-title">'+v1.productName
+							+'</div>'
+							+'<div class="aui-list-item-text">'
+								+'<span>'
+									+'<span>规格：</span><span>'+v1.specNum+'</span><span>'+v1.specUnit+'</span>'
+								+'</span>'
+							+'</div>'
+							+'<div class="aui-list-item-text edit_number_con">'
+								+'<span class="prices_text">'
+									+'<span>¥</span>'
+									+'<input type="number" class="aui-input aui-text-center priceSingle" value="'+v1.productPrice+'"> '
+								+'</span>'
+								+'<span>'
+									+'<span>×</span>'
+									+'<span class="productNums">'+v1.productNum+'</span>'
+									+'<span>'+v1.productUnit+'</span>'				
+								+'</span>'
+							+'</div>'
+						+'</div>'
+					+'</div>'
+				+'</li>'
+				+'<li class="gifts-list2">'
+					+'<font>'
+						+'<strong>赠品</strong>'
+						+'<font>'+v1.giftName+'</font>'
+					+'</font>'
+				+'</li>'
+		});
+
+			
+		
+		
+		var aui_ul=document.querySelector('#aui-list');
+		aui_ul.innerHTML=dom;
+
+		var aui_lists=aui_ul.querySelectorAll('.aui-list-item');
+		var productNums=aui_ul.querySelectorAll('.productNums');
+		var selectTotle=document.querySelector(".selectTotle");//总数量
+		var priceSingle=document.querySelectorAll('.priceSingle');
+		var priceTotle=document.querySelector('.priceTotle');
+		var priceTotle_end=document.querySelector('.aui-text-danger strong');
+		var sure_buybtn=document.querySelector('.aui-text-white');
+		// 数量总计
+		function sum1(){
+			var sum=null;
+			for(var i = 0,len=aui_lists.length; i < len; i++){
+				sum+=parseInt(productNums[i].innerHTML);	
+			}
+
+			selectTotle.innerHTML=sum;
+		}
+
+		sum1();
+
+		// 总价合计
+		function priceTotles(){
+			var totles=null;
+			for(var i = 0,len=aui_lists.length; i < len; i++){
+				totles+=parseFloat(priceSingle[i].value).toFixed(2)*parseInt(productNums[i].innerHTML);
+			}
+			priceTotle.innerHTML=totles.toFixed(2);		
+		}
+		priceTotles();
+		priceTotle_end.innerHTML=priceTotle.innerHTML;
+
+		 sure_buybtn.addEventListener('touchstart',function(event){
+		 	console.log("确认订单");
+		 })
+
+
+	</script>
+
+</html>

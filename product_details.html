@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>商品详情</title>
+		<link rel="stylesheet" type="text/css" href="../css/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
+		<style type="text/css">
+			.bg-dark {
+				background: #333333 !important;
+			}
+			
+			.aui-slide-node img {
+				height: 100%;
+			}
+		</style>
+	</head
+
+	<body>
+		<!--头部-->
+		<header class="aui-bar aui-bar-nav aui-bar-light">
+			<a class="aui-pull-left aui-btn" href="javascript:history.go(-1)">
+				<span class="aui-iconfont aui-icon-left"></span>
+			</a>
+			<div class="aui-title">修改</div>
+		</header>
+		<div style="height: 2.2rem;"></div>
+		<!--头部end-->
+		<!--产品图片轮换-->
+		<div id="aui-slide3">
+			<div class="aui-slide-wrap">
+				<div class="aui-slide-node bg-dark">
+					<img src="../image/l1.png" />
+				</div>
+				<div class="aui-slide-node bg-dark">
+					<img src="../image/l2.png" />
+				</div>
+				<div class="aui-slide-node bg-dark">
+					<img src="../image/l3.png" />
+				</div>
+			</div>
+			<div class="aui-slide-page-wrap">
+				<!--分页容器-->
+			</div>
+		</div>
+
+		<!--产品图片轮换 end-->
+		<!--产品简介-->
+		<div class="aui-content aui-margin-b-15">
+			<ul class="aui-list aui-media-list">
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title"><strong>小型断路开关家用C型小型空气开关</strong></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="aui-content aui-margin-b-15">
+			<ul class="aui-list aui-list-in">
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title">单价</div>
+						<div class="aui-list-item-right"><span class="prices_text aui-text-default">¥ 9.80</span></div>
+					</div>
+				</li>
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title">商品编码</div>
+						<div class="aui-list-item-right">150001158</div>
+					</div>
+				</li>
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title">商品型号</div>
+						<div class="aui-list-item-right">DSF888</div>
+					</div>
+				</li>
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title">规格</div>
+						<div class="aui-list-item-right">40A，1P</div>
+					</div>
+				</li>
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title">包装</div>
+						<div class="aui-list-item-right">袋装</div>
+					</div>
+				</li>
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title">库存</div>
+						<div class="aui-list-item-right">88件</div>
+					</div>
+				</li>
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title">数量</div>
+						<div class="edit_number">
+							<i class="aui-iconfont aui-icon-minus"></i>
+							<input type="number" class="aui-input aui-text-center" id="detail_num" value="3">
+							<i class="aui-iconfont aui-icon-plus"></i>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--产品简介end-->
+		<!--底部-->
+		<div style="height: 3.2rem;"></div>
+		<footer class="aui-bar aui-bar-tab aui-margin-t-15">
+			<div class="aui-bar-tab-item blue-bar aui-text-white" tapmode style="width: auto;" onclick="window.location.href='../index.html?id='+document.getElementById('detail_num').value"  value="back">确认</div>
+		</footer>
+		<!--底部end-->
+	</body>
+	<script type="text/javascript" src="../script/aui-slide.js"></script>
+	<script type="text/javascript">
+		var slide = new auiSlide({
+			container: document.getElementById("aui-slide"),
+			// "width":300,
+			//"height":260,
+			"speed": 300,
+			"pageShow": true,
+			"pageStyle": 'dot',
+			"loop": true,
+			'dotPosition': 'center',
+			currentPage: currentFun
+		})
+
+		function currentFun(index) {
+			console.log(index);
+		}
+		var slide3 = new auiSlide({
+			container: document.getElementById("aui-slide3"),
+			// "width":300,
+			"bottom": 0,
+			"speed": 500,
+			"autoPlay": 3000, //自动播放
+			"loop": true,
+			"pageShow": true,
+			"pageStyle": 'line',
+			'dotPosition': 'center'
+		})
+		console.log(slide3.pageCount());
+	</script>
+	<script type="text/javascript">
+		var aui_input=document.querySelector('.aui-input');
+		var max_list=document.querySelector('.aui-icon-plus');
+		var min_list=document.querySelector('.aui-icon-minus');
+		var num=parseInt(aui_input.value);
+		// console.log(num);
+		console.log(max_list);
+		console.log(min_list);
+		max_list.addEventListener("touchstart",function(){
+			num++;
+			aui_input.value=num;
+
+		})
+		min_list.addEventListener("touchstart",function(){
+			num--;
+			aui_input.value=num;
+
+		})
+
+	</script>
+
+
+</html>

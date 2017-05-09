@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>打印预览</title>
+		<link rel="stylesheet" type="text/css" href="../css/aui.css" />
+		<style type="text/css">
+			p {
+				margin-bottom: 0.5rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--头部搜索-->
+		<header class="aui-bar aui-bar-nav aui-bar-light">
+			<!--<a class="aui-pull-left aui-btn" onclick="openDialog('text')">-->
+			<a class="aui-pull-left aui-btn" href="javascript:history.go(-1)">
+				<span class="aui-iconfont aui-icon-left"></span>
+			</a>
+			<div class="aui-title">打印预览</div>
+		</header>
+		<div style="height: 2.2rem;"></div>
+		<!--头部搜索end-->
+		<!--打印区-->
+		<div class="ticket_con">
+			<li>
+				欢迎光临XXX店
+			</li>
+			<li>
+				地址：XXXXXX
+			</li>
+			<li>
+				电话：010-888888
+			</li>
+			<li>
+				单号：8888888888
+			</li>
+			<li>
+				日期：2017-03-12 17:56:38
+			</li>
+			<li class="line"></li>
+			<li class="aui-row aui-row-padded">
+				<div class="aui-col-xs-6">
+					名称
+				</div>
+				<div class="aui-col-xs-3 aui-text-center">
+					数量
+				</div>
+				<div class="aui-col-xs-3 aui-text-right">
+					单价
+				</div>
+			</li>
+			<li class="aui-row aui-row-padded">
+				<div class="aui-col-xs-6">
+					商品名称商品名称商品名称商品名称商品名称
+				</div>
+				<div class="aui-col-xs-3 aui-text-center">
+					1
+				</div>
+				<div class="aui-col-xs-3 aui-text-right">
+					18.00
+				</div>
+			</li>
+			<li class="aui-row aui-row-padded">
+				<div class="aui-col-xs-6">
+					商品名称商品名称
+				</div>
+				<div class="aui-col-xs-3 aui-text-center">
+					1
+				</div>
+				<div class="aui-col-xs-3 aui-text-right">
+					18.00
+				</div>
+			</li>
+			<li class="aui-row aui-row-padded">
+				<div class="aui-col-xs-6">
+					商品名称商品名称
+				</div>
+				<div class="aui-col-xs-3 aui-text-center">
+					1
+				</div>
+				<div class="aui-col-xs-3 aui-text-right">
+					18.00
+				</div>
+			</li>
+			<li class="aui-row aui-row-padded">
+				<div class="aui-col-xs-6">
+					商品名称商品名称
+				</div>
+				<div class="aui-col-xs-3 aui-text-center">
+					1
+				</div>
+				<div class="aui-col-xs-3 aui-text-right">
+					18.00
+				</div>
+			</li>
+			<li class="line"></li>
+			<li>数量累计：4</li>
+			<li>应收：1800.00</li>
+			<li>实收：1800.00</li>
+			<li class="line"></li>
+			<li>收款员:老板</li>
+			<li>欢迎光临，谢谢惠顾.</li>
+		</div>
+		<!--打印区end-->
+		<!--底部操作-->
+		<div style="height: 3.2rem;"></div>
+		<footer class="aui-bar aui-bar-tab aui-margin-t-15 bar-submit">
+			<div id="sconfirm" class="aui-bar-tab-item blue-bar aui-text-white" tapmode style="width: auto;" onclick="showDefault('loading')">打印小票</div>
+		</footer>
+		<!--底部操作end-->
+
+	</body>
+	<script type="text/javascript" src="../script/api.js"></script>
+	<script type="text/javascript" src="../script/aui-collapse.js"></script>
+	<script type="text/javascript" src="../script/aui-toast.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+			api.parseTapmode();
+		}
+		var collapse = new auiCollapse({
+			autoHide: true //是否自动隐藏已经展开的容器
+		});
+	</script>
+	<script type="text/javascript" src="../script/aui-dialog.js"></script>
+	<script type="text/javascript">
+		//正在打印，打印完成自动返回首页
+		apiready = function() {
+			api.parseTapmode();
+		}
+		var toast = new auiToast();
+
+		function showDefault(type) {
+			switch(type) {
+				case "loading":
+					toast.loading({
+						title: "正在打印小票",
+						duration: 2000
+					}, function(ret) {
+						console.log(ret);
+						setTimeout(function() {
+							toast.hide();
+						}, 3000)
+					});
+					break;
+				default:
+					// statements_def
+					break;
+			}
+		}
+	</script>
+
+</html>

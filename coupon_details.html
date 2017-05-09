@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>订单</title>
+		<link rel="stylesheet" type="text/css" href="../css/aui.css" />
+	</head>
+
+	<body>
+		<!--头部搜索-->
+		<header class="aui-bar aui-bar-nav aui-bar-light">
+			<a class="aui-pull-left aui-btn" href="coupon.html">
+				<span class="aui-iconfont aui-icon-left"></span>
+			</a>
+			<div class="aui-title">货单详情</div>
+		</header>
+		<div style="height: 2.2rem;"></div>
+		<!--头部搜索end-->
+		<!--订单状态-->
+		<div class="status_no_payment">
+			<h2>待收款</h2>
+		</div>
+		<!--订单状态 end-->
+		<!--货单号-->
+		<div class="aui-content aui-margin-b-15">
+			<ul class="aui-list aui-list-in">
+				<li class="aui-list-item  aui-margin-t-15">
+					<div class="aui-list-item-inner">
+						<p>单号：<span class="aui-text-default">1004306303</span></p>
+						<div class="aui-list-item-right">
+							<div class="aui-btn aui-btn-outlined">复制</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--货单号 end-->
+		<!--选择客户信息-->
+		<div class="aui-content aui-margin-b-15">
+			<ul class="aui-list aui-list-in address_bj">
+				<li class="aui-list-item aui-list-item-arrow" onclick="javascript:window.location.href='customer_information.html'">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title">客户信息<span class="aui-font-size-14 text_c_gray"> [可不选]</span></div>
+						<div class="aui-list-item-right">选择</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+		<!--选择客户信息end-->
+
+		<!--商品列表-->
+		<section>
+			<ul class="aui-list aui-collapse aui-border aui-margin-b-15 shopping_list">
+				<div class="aui-collapse-item">
+					<li class="aui-list-item aui-collapse-header aui-active" tapmode>
+						<div class="aui-list-item-inner">
+							<div class="aui-list-item-title">共16件商品，总价 ¥ 200000.00</div>
+							<div class="aui-list-item-right">
+								<i class="aui-iconfont aui-icon-down aui-collapse-arrow"></i>
+							</div>
+						</div>
+					</li>
+					<div class="aui-collapse-content aui-border-b aui-show">
+						<div class="aui-content list_gray">
+							<ul class="aui-list aui-media-list">
+								<li class="aui-list-item">
+									<div class="aui-media-list-item-inner">
+										<div class="aui-list-item-media">
+											<img src="../image/thumb.jpg">
+										</div>
+										<div class="aui-list-item-inner">
+											<div class="aui-list-item-title">
+												小型断路开关家用C型小型空气开关
+											</div>
+											<div class="aui-list-item-text">
+												<span>规格：20A</span>
+											</div>
+											<div class="aui-list-item-text edit_number_con">
+												<span class="prices_text">¥ 988.00</span>
+												<span>×2件</span>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="gifts-list2">
+									<font><strong>赠品</strong>赠品名称赠品名称赠品名称</font>
+								</li>
+								<li class="gifts-list2">
+									<font><strong>赠品</strong>赠品名称赠品名称赠品名称</font>
+								</li>
+								<li class="aui-list-item">
+									<div class="aui-media-list-item-inner">
+										<div class="aui-list-item-media">
+											<img src="../image/thumb.jpg">
+										</div>
+										<div class="aui-list-item-inner">
+											<div class="aui-list-item-title">
+												小型断路开关家用C型小型空气开关
+											</div>
+											<div class="aui-list-item-text">
+												<span>规格：20A</span>
+											</div>
+											<div class="aui-list-item-text edit_number_con">
+												<span class="prices_text">¥ 988.00</span>
+												<span>×2件</span>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="gifts-list2">
+									<font><strong>赠品</strong>赠品名称赠品名称赠品名称</font>
+								</li>
+								<li class="aui-list-item">
+									<div class="aui-media-list-item-inner">
+										<div class="aui-list-item-media">
+											<img src="../image/thumb.jpg">
+										</div>
+										<div class="aui-list-item-inner">
+											<div class="aui-list-item-title">
+												小型断路开关家用C型小型空气开关
+											</div>
+											<div class="aui-list-item-text">
+												<span>规格：20A</span>
+											</div>
+											<div class="aui-list-item-text edit_number_con">
+												<span class="prices_text">¥ 988.00</span>
+												<span>×2件</span>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="gifts-list2">
+									<font><strong>赠品</strong>赠品名称赠品名称赠品名称</font>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</ul>
+		</section>
+		<!--商品列表 end-->
+
+		<!--填写备注信息-->
+		<div class="aui-content aui-margin-b-15">
+			<ul class="aui-list aui-list-in">
+				<li class="aui-list-item aui-list-item-arrow">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title">优惠活动</div>
+						<div class="aui-list-item-right">满减促销</div>
+					</div>
+				</li>
+				<li class="aui-list-item aui-list-item-arrow">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title">整个折扣</div>
+						<div class="aui-list-item-right">全额</div>
+					</div>
+				</li>
+				<li class="aui-list-item aui-list-item-arrow">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title">销售人员</div>
+						<div class="aui-list-item-right">默认登录用户</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="aui-content aui-margin-b-15">
+			<ul class="aui-list aui-form-list">
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-label">备注信息</div>
+						<div class="aui-list-item-input">
+							<textarea placeholder="输入备注信息"></textarea>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--填写备注信息end-->
+		<div style="height: 3rem;"></div>
+		<!--底部操作-->
+		<footer class="aui-bar aui-bar-tab aui-margin-t-15 bar-submit">
+			<div class="aui-bar-tab-item">
+				<div>合计：<span class="aui-text-danger">¥ <strong>1800.00</strong></span></div>
+			</div>
+			<div class="aui-bar-tab-item aui-bg-gray" tapmode style="width: 4rem;" onclick="javascript:window.location.href='index.html'">继续添加</div>
+			<div class="aui-bar-tab-item blue-bar aui-text-white" tapmode style="width: 4rem;" onclick="javascript:window.location.href='payment_confirmation.html'">去结账</div>
+		</footer>
+		<!--底部操作end-->
+	</body>
+	<script type="text/javascript" src="../script/api.js"></script>
+	<script type="text/javascript" src="../script/aui-tab.js"></script>
+	<script type="text/javascript" src="../script/aui-collapse.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+			api.parseTapmode();
+		}
+		var tab = new auiTab({
+			element: document.getElementById("tab"),
+		}, function(ret) {
+			console.log(ret)
+		});
+		//订单折叠功能
+		apiready = function() {
+			api.parseTapmode();
+		}
+		var collapse = new auiCollapse({
+			autoHide: true //是否自动隐藏已经展开的容器
+		});
+	</script>
+
+</html>

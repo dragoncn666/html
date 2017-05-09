@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>打印小票</title>
+		<link rel="stylesheet" type="text/css" href="../css/aui.css" />
+		<style type="text/css">
+			p {
+				margin-bottom: 0.5rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--头部搜索-->
+		<header class="aui-bar aui-bar-nav aui-bar-light">
+			<!--<a class="aui-pull-left aui-btn" onclick="openDialog('text')">-->
+			<a class="aui-pull-left aui-btn" href="javascript:history.go(-1)">
+				<span class="aui-iconfont aui-icon-left"></span>
+			</a>
+			<div class="aui-title">打印小票</div>
+			<a class="aui-pull-right">
+				搜索蓝牙
+			</a>
+		</header>
+		<div style="height: 2.2rem;"></div>
+		<!--头部搜索end-->
+		<!--打印设置-->
+		<div class="aui-content aui-margin-b-15">
+			<ul class="aui-list aui-list-in">
+				<li class="aui-list-header">
+					选择打印机尺寸
+				</li>
+
+				<div class="aui-content-padded">
+					<label><input class="aui-radio" type="radio" name="demo" checked=""> 58mm</label>&nbsp;&nbsp;
+					<label><input class="aui-radio" type="radio" name="demo"> 80mm</label>
+				</div>
+				<li class="aui-list-header">
+					已连接的设备<span class="text_c_gray">[默认打印机]</span>
+				</li>
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title">FTP-628MCL354</div>
+						<div class="aui-list-item-right aui-text-info">
+							<i class="aui-iconfont aui-icon-correct"></i>
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-header">
+					搜索到的设备
+				</li>
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title">FTP-628MCL354</div>
+					</div>
+				</li>
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-list-item-title">FTP-628MCL354</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--打印设置end-->
+		<!--底部操作-->
+		<div style="height: 3.2rem;"></div>
+		<footer class="aui-bar aui-bar-tab aui-margin-t-15 bar-submit">
+			<div id="sconfirm" class="aui-bar-tab-item" tapmode style="width: auto;" onclick="javascript:window.location.href='ticket.html'">打印预览</div>
+			<div id="sconfirm" class="aui-bar-tab-item blue-bar aui-text-white" tapmode style="width: auto;" onclick="showDefault('loading')">直接打印</div>
+		</footer>
+		<!--底部操作end-->
+
+	</body>
+	<script type="text/javascript" src="../script/api.js"></script>
+	<script type="text/javascript" src="../script/aui-collapse.js"></script>
+	<script type="text/javascript" src="../script/aui-toast.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+			api.parseTapmode();
+		}
+		var collapse = new auiCollapse({
+			autoHide: true //是否自动隐藏已经展开的容器
+		});
+	</script>
+	<script type="text/javascript" src="../script/aui-dialog.js"></script>
+	<script type="text/javascript">
+		//正在打印，打印完成自动返回首页
+		apiready = function() {
+			api.parseTapmode();
+		}
+		var toast = new auiToast();
+
+		function showDefault(type) {
+			switch(type) {
+				case "loading":
+					toast.loading({
+						title: "正在打印小票",
+						duration: 2000
+					}, function(ret) {
+						console.log(ret);
+						setTimeout(function() {
+							toast.hide();
+						}, 3000)
+					});
+					break;
+				default:
+					// statements_def
+					break;
+			}
+		}
+	</script>
+
+</html>

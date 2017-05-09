@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>订单收款</title>
+		<link rel="stylesheet" type="text/css" href="../css/aui.css" />
+		<style type="text/css">
+			p {
+				margin-bottom: 0.5rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--头部搜索-->
+		<header class="aui-bar aui-bar-nav aui-bar-light">
+			<!--<a class="aui-pull-left aui-btn" onclick="openDialog('text')">-->
+			<a class="aui-pull-left aui-btn" href="confirm_order.html">
+				<span class="aui-iconfont aui-icon-left"></span>
+			</a>
+			<div class="aui-title">订单收款</div>
+		</header>
+		<div style="height: 2.2rem;"></div>
+		<!--头部搜索end-->
+		<!--支付方式-->
+		<div class="amount_con ">
+			<span>应收金款</span>
+			<h1>¥1800.00</h1>
+		</div>
+		<div class="aui-content aui-margin-b-15">
+			<div class="aui-content-padded">请选择收款方式：</div>
+			<section>
+				<ul class="aui-list aui-collapse aui-border">
+					<div class="aui-collapse-item">
+						<li class="aui-list-item aui-collapse-header" tapmode="">
+							<div class="aui-list-item-inner">
+								<div class="aui-list-item-title"><i class="icon_zfb"></i>支付宝收款</div>
+								<div class="aui-list-item-right"><input type="radio" class="aui-radio" name="demo1"></div>
+							</div>
+						</li>
+						<div class="aui-collapse-content qr_code aui-border-b">
+							<img src="../image/zfb.png">
+							<h2 class="aui-text-info">扫我付款</h2>
+						</div>
+					</div>
+					<div class="aui-collapse-item">
+						<li class="aui-list-item aui-collapse-header" tapmode="">
+							<div class="aui-list-item-inner">
+								<div class="aui-list-item-title"><i class="icon_wx"></i>微信收款</div>
+								<div class="aui-list-item-right"><input type="radio" class="aui-radio" name="demo1"></div>
+							</div>
+						</li>
+						<div class="aui-collapse-content qr_code qr_code aui-border-b">
+							<img src="../image/wxzf.png">
+							<h2 class="aui-text-info">扫我付款</h2>
+						</div>
+					</div>
+					<div class="aui-collapse-item">
+						<li class="aui-list-item aui-collapse-header" tapmode="">
+							<div class="aui-list-item-inner">
+								<div class="aui-list-item-title"><i class="icon_xj"></i>现金收款</div>
+								<div class="aui-list-item-right"><input type="radio" class="aui-radio" name="demo1"></div>
+							</div>
+						</li>
+						<div class="aui-collapse-content">
+							<ul class="aui-list aui-form-list cash_con">
+								<li class="aui-list-item">
+									<div class="aui-list-item-inner">
+										<div class="aui-list-item-label">实收金额</div>
+										<div class="aui-list-item-input">
+											<input type="number" value="00.00" placeholder="请输入金额" class=" aui-text-right">
+										</div>
+									</div>
+								</li>
+								<li class="aui-list-item">
+									<div class="aui-list-item-inner">
+										<div class="aui-list-item-label">找零</div>
+										<div class="aui-list-item-input aui-text-right">
+											¥56.00
+										</div>
+									</div>
+								</li>
+						</div>
+					</div>
+					<div class="aui-collapse-item">
+						<li class="aui-list-item aui-collapse-header" tapmode="">
+							<div class="aui-list-item-inner">
+								<div class="aui-list-item-title"><i class="icon_yl"></i>银联卡收款</div>
+								<div class="aui-list-item-right"><input type="radio" class="aui-radio" name="demo1"></div>
+							</div>
+						</li>
+						<div class="aui-collapse-content">
+							<!--填写客户信息-->
+							<div class="aui-content aui-margin-b-15">
+								<ul class="aui-list aui-form-list">
+									<li class="aui-list-header">填写银行卡信息</li>
+									<li class="aui-list-item">
+										<div class="aui-list-item-inner aui-list-item-arrow">
+											<div class="aui-list-item-label">所属银行</div>
+											<div class="aui-list-item-input">
+												<input type="number" placeholder="请选择">
+											</div>
+										</div>
+									</li>
+									<li class="aui-list-item">
+										<div class="aui-list-item-inner">
+											<div class="aui-list-item-label">银行卡号</div>
+											<div class="aui-list-item-input">
+												<input type="number" placeholder="银行卡号后四位数字">
+											</div>
+										</div>
+									</li>
+									<li class="aui-list-item">
+										<div class="aui-list-item-inner">
+											<div class="aui-list-item-label">持卡人姓名 </div>
+											<div class="aui-list-item-input">
+												<input type="text">
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!--填写客户信息end-->
+						</div>
+					</div>
+					</ul>
+			</section>
+			
+		</div>
+		<!--支付方式end-->
+		<!--底部操作-->
+		<div style="height: 3.2rem;"></div>
+		<footer class="aui-bar aui-bar-tab aui-margin-t-15 bar-submit">
+			<div id="sconfirm" class="aui-bar-tab-item blue-bar aui-text-white" tapmode style="width: auto;">确认完成收款</div>
+		</footer>
+		<!--底部操作end-->
+		<div id="mask_bj" class="mask_bj" style="z-index: 12;"></div>
+		<div class="smal_ticket">
+			<div class="close_qrcode">
+				<i class="aui-iconfont aui-icon-close"></i>
+			</div>
+			<div class="aui-i-item">
+				<i class="icon-list icon-success"></i>
+				<div class="aui-icon-text">
+					<h2>收款成功</h2>
+					<p>扫描二维码，获取小票</p>
+				</div>
+			</div>
+			<p><img src="../image/smal_ticket.jpg" /></p>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="../script/api.js"></script>
+	<script type="text/javascript" src="../script/aui-collapse.js"></script>
+	<script type="text/javascript" src="../script/aui-toast.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+			api.parseTapmode();
+		}
+		var collapse = new auiCollapse({
+			autoHide: true //是否自动隐藏已经展开的容器
+		});
+	</script>
+	<script type="text/javascript" src="../script/aui-dialog.js"></script>
+	<script type="text/javascript" src="../script/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+			api.parseTapmode();
+		}
+		var dialog = new auiDialog();
+
+		function openDialog(type) {
+			switch(type) {
+				case "text":
+					dialog.alert({
+						title: "收款提示",
+						msg: '收款未完成，是否取消收款',
+						buttons: ['暂不收款', '继续收款']
+					}, function(ret) {
+						console.log(ret)
+					})
+					break;
+
+			}
+		}
+
+		$("#sconfirm").click(function() {
+			$(".smal_ticket").show();
+			$("#mask_bj").show();
+		});
+		$(".close_qrcode").click(function() {
+			$(".smal_ticket").hide();
+			$("#mask_bj").hide();
+
+		});
+
+		//正在打印，打印完成自动返回首页
+		// apiready = function() {
+		// 	api.parseTapmode();
+		// }
+		// var toast = new auiToast();
+
+		// function showDefault(type) {
+		// 	switch(type) {
+		// 		case "loading":
+		// 			toast.loading({
+		// 				title: "正在打印小票",
+		// 				duration: 2000
+		// 			}, function(ret) {
+		// 				console.log(ret);
+		// 				setTimeout(function() {
+		// 					toast.hide();
+		// 				}, 3000)
+		// 			});
+		// 			break;
+		// 		default:
+		// 			// statements_def
+		// 			break;
+		// 	}
+		// }
+
+		var sconfirm=document.querySelector("#sconfirm");
+		sconfirm.addEventListener("touchstart",function(){
+			console.log(123);
+		})
+	</script>
+
+</html>
